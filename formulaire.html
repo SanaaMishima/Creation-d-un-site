@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Formulaire</title>
+		<link rel="stylesheet" href="Mise_en_forme/Histoire.css">
+		<script language="javascript">
+		function ver(){
+		if document.form.choix2.value==True{
+		var a=a+1;
+		else{
+		var a=a+0;}}
+		if document.form.choix4.value==True{
+		var a=a+1;
+		else{
+		var a=a+0;}}
+		if document.form.c2.value==True{
+		var a=a+0;
+		else{
+		var a=a+1;}}
+		if a==1{
+		var rep=1;
+		var mes="Dommage... Vous n'avez pas été très attentif...";
+		elif a==2{
+		var rep=2
+		var mes="Etant donné qu'il n'y a que trois questions, on peut dire que vous êtes au-dessus de la moyenne... Et que vous êtes sûrement tombé(e) dans le piège"
+		elif a==3{
+		var rep=3
+		var mes="Bravo ! Un sans faute ! Vous avez été attentif et vous ne vous êtes pas fait(e) avoir ! Félicitation";}}}
+		confirm("Merci d'avoir répondu ! Vous avez "+"rep"+" bonne(s) réponse(s) ! "+"mes"+" Voulez-vous recommencer le quiz ?");
+		}
+		</script>
+	</head>
+	<body>
+	<h1>Donnez votre avis !</h1>
+	<p style="position:relative;left:1150px;top:-20px;"><a href=Projet.html><img src=data/maison.png style="width:30px;height:30px;object-fit:cover;"></a></p>
+	<form method="post">
+    <div>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="user_name">
+    </div>
+	<br>
+	<br>
+    <div>
+        <label for="msg">QCM :</label>
+	</div>
+	<br>
+	<div>
+		<label for="msg">Quel est le titre du livre ? :
+		<input type="radio" id="choix1" name="c">
+		<label for="msg">Rêve étranger</label>
+		<input type="radio" id="choix2" name="c">
+		<label for="msg">Rêve sans réveil</label>
+        <input type="radio" id="choix3" name="c">
+		<label for="msg">Réveil violent</label>
+    </div>
+	<br>
+	<div>
+		<label for="msg">A quel film fait-on référence dans le sujet de la première Mission ? :
+		<input type="radio" id="choix4" name="c1">
+		<label for="msg">Indiana Jones, les aventuriers de l'arche perdue</label>
+		<input type="radio" id="choix5" name="c1">
+		<label for="msg">Iron Man 2</label>
+        <input type="radio" id="choix6" name="c1">
+		<label for="msg">Star Wars, épisode IV</label>
+    </div>
+	<br>
+	<div>
+		<label for="msg">Comment s'appelle le héros ? :
+		<input type="radio" id="choix7" name="c2">
+		<label for="msg">Max Lesgrade</label>
+		<input type="radio" id="choix8" name="c2">
+		<label for="msg">Lucas Narima</label>
+        <input type="radio" id="choix9" name="c2">
+		<label for="msg">Enrique Jinta</label>
+    </div>
+	<br>
+	<br>
+	<div>
+		Que pensez-vous qu'il va se passer dans la suite de l'histoire ?
+		<textarea name="op" cols="40" rows="3"></textarea>
+	<br>
+	<br>
+	<div class="button">
+        <button type="submit">Envoyer le formulaire</button>
+		<button type="reset">Suprimer le formulaire</button>
+	<input type="button" name="but" value="Vérifier les réponses" onclick=ver()>
+	</div>
+	</form>
+	</body>
+</html>
